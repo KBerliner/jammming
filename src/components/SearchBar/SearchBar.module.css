@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Varela+Round&display=swap');
+
+/* div {
+    text-align: center;
+} */
+
+form {
+    display: inline-block;
+    margin-left: 15vw;
+}
+
+.neumorphismShadow {
+    box-shadow:  10px 10px 20px #6b0e55,
+    -10px -10px 20px #bd1a97;
+}
+
+
+
+.searchIcon {
+    height: 6vh;
+    width: 4vw;
+    border-top-right-radius: 44px;
+    border-bottom-right-radius: 44px;
+    background: #941476;
+    padding: 0.5vh 1.5vw;
+    display: inline;
+    margin: 4vh auto;
+    position: absolute;
+    cursor: pointer;
+    background: #941476;
+    box-shadow: inset 10px 10px 20px #6e0f57,
+                inset -10px -10px 20px #ba1995;
+}
+
+input[type="text"]:focus-visible {
+    outline: none;
+    border-top-left-radius: 44px;
+    border-bottom-left-radius: 44px;
+    background: #941476;
+    box-shadow: inset -10px 10px 20px #6e0f57,
+                inset 10px -10px 20px #ba1995;
+}
+
+input[type="text"] {
+    padding: 0.5vh 1.5vw;
+    font-size: 24px;
+    color: white;
+    letter-spacing: 0.1vw;
+    font-family: 'Ubuntu', sans-serif;
+    width: 60vw;
+    height: 6vh;
+    margin: 4vh auto;
+    border: none;
+    border-top-left-radius: 44px;
+    border-bottom-left-radius: 44px;
+    background: #941476;
+}

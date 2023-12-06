@@ -1,38 +1,27 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  background-image: 
+  linear-gradient(
+    to bottom,
+    hsl(315, 76.19%, 32.94%) 0%,
+    hsl(314.59, 76.19%, 32.87%) 7.3%,
+    hsl(313.43, 76.19%, 32.66%) 12.9%,
+    hsl(311.62, 76.2%, 32.33%) 16.9%,
+    hsl(309.27, 76.2%, 31.9%) 20%,
+    hsl(306.47, 76.21%, 31.39%) 22.4%,
+    hsl(303.3, 76.22%, 30.82%) 24.5%,
+    hsl(299.86, 76.27%, 30.25%) 26.9%,
+    hsl(296.46, 77.32%, 30.97%) 29.8%,
+    hsl(293.37, 78.3%, 31.65%) 33.7%,
+    hsl(290.65, 79.19%, 32.27%) 39%,
+    hsl(288.33, 79.96%, 32.82%) 46%,
+    hsl(286.44, 80.6%, 33.28%) 55.2%,
+    hsl(285.03, 81.09%, 33.62%) 67%,
+    hsl(284.14, 81.39%, 33.84%) 81.8%,
+    hsl(283.83, 81.5%, 33.92%) 100%
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* div {
+  color: #941476;
+} */
