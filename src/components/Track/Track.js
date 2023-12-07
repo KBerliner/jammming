@@ -6,7 +6,7 @@ import removeBtn from '../../visual/close_FILL0_wght400_GRAD0_opsz24.svg';
 export default function Track(props) {
     function handleClick() {
         const song = {
-            id: props.id,
+            uri: props.uri,
             name: props.name,
             artist: props.artist,
             album: props.album

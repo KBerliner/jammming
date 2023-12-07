@@ -15,7 +15,7 @@
 .playlistTitle {
     box-shadow: inset 10px 10px 20px #6e0f57,
     inset -10px -10px 20px #ba1995;
-    width: 70%;
+    width: 20vw;
     border: none;
     border-radius: 22px;
     padding: 2vh 2vw;

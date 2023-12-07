@@ -4,13 +4,16 @@
     border-radius: 44px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     color: white;
 }
 
 h2 {
-    margin-top: 2vh;
+    margin-top: 4vh;
+}
+
+ul {
+    margin: 0;
 }
 
 .neumorphismShadow {
