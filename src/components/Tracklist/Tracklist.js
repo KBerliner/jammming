@@ -19,10 +19,11 @@ const falsifiedTracklist = [
 ]
 
 export default function Tracklist() {
-    const tracks = falsifiedTracklist.map(track => <Track key={track.id} name={track.name} artist={track.artist} album={track.album} />)
+    const tracks = falsifiedTracklist.map(track => <Track key={track.id} name={track.name} artist={track.artist} album={track.album} saved={false} />)
 
     return (
         <div className={`${styles.tracklistContainer} ${styles.neumorphismShadow}`}>
+            <h2>Search Results</h2>
             <ul>
                 {tracks}
             </ul>

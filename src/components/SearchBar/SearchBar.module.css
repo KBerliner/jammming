@@ -19,6 +19,12 @@ form {
     inset -10px -10px 20px #ba1995;
 }
 
+.neumorphismShadowPortruding {
+    background: linear-gradient(145deg, #9e157e, #85126a);
+    box-shadow:  10px 10px 20px #6e0f57,
+                -10px -10px 20px #ba1995;
+}
+
 
 
 .searchIcon {

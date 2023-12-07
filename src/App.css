@@ -22,6 +22,7 @@
   );
 }
 
-/* div {
-  color: #941476;
-} */
+.tracksAndPlaylistContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}

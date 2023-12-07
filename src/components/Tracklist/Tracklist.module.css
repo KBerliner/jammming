@@ -1,9 +1,12 @@
 .tracklistContainer {
     width: 35vw;
-    margin-left: 15vw;
+    margin-left: 12vw;
     border-radius: 44px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .neumorphismShadow {

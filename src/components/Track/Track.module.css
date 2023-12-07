@@ -7,7 +7,6 @@
     box-shadow: inset 10px 10px 20px #6e0f57,
     inset -10px -10px 20px #ba1995;
     border-radius: 20px;
-    color: white;
 }
 
 ul {
@@ -16,7 +15,6 @@ ul {
 
 .addToPlaylistButton {
     display: inline;
-    height: 100%;
     border-radius: 6px;
     cursor: pointer;
     box-shadow:  4px 4px 10px #6b0e55,
