@@ -12,9 +12,11 @@ export default function Tracklist(props) {
     return (
         <div className={`${styles.tracklistContainer} ${styles.neumorphismShadow}`}>
             <h2>Search Results</h2>
+            {props.tracklist.length === 0 ? <h4>Search for some Songs!</h4> : 
             <ul>
                 {tracks}
-            </ul>
+            </ul>} 
+
         </div>
     )
 }

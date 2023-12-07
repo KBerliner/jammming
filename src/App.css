@@ -1,5 +1,6 @@
 .App {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   background-image: 
   linear-gradient(
     to bottom,
@@ -25,4 +26,13 @@
 .tracksAndPlaylistContainer {
   display: grid;
   grid-template-columns: 2fr 1fr;
+}
+
+#testinput {
+  border: 2px solid red;
+  width: 200px;
+  height: 75px;
+  border-radius: 0;
+  background-color: white;
+  color: black;
 }
