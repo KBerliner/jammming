@@ -12,6 +12,23 @@
     height: 100%;
 }
 
+.playlistTitle {
+    box-shadow: inset 10px 10px 20px #6e0f57,
+    inset -10px -10px 20px #ba1995;
+    width: 70%;
+    border: none;
+    border-radius: 22px;
+    padding: 2vh 2vw;
+    background-color: transparent;
+    margin-top: 2vh;
+    font-size: 24px;
+    color: white;
+}
+
+.playlistTitle:focus-visible {
+    outline: none;
+}
+
 .submitToSpotifyBtn {
     width: 20vw;
     height: 5vh;
@@ -23,4 +40,5 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 4vh;
 }

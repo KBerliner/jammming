@@ -3,9 +3,10 @@
     width: 30vw;
     justify-content: space-around;
     align-items: center;
-    margin: 2vh 0;
-    box-shadow: inset 10px 10px 20px #6e0f57,
-    inset -10px -10px 20px #ba1995;
+    margin: 3vh 0;
+    background: linear-gradient(145deg, #85126a, #9e157e);
+    box-shadow:  20px 20px 60px #7e1164,
+                 -20px -20px 60px #aa1788;
     border-radius: 20px;
 }
 
@@ -19,4 +20,10 @@ ul {
     cursor: pointer;
     box-shadow:  4px 4px 10px #6b0e55,
     -2px -2px 5px #bd1a97;
+}
+
+.shadow {
+    background: linear-gradient(145deg, #85126a, #9e157e);
+    box-shadow:  20px 20px 60px #7e1164,
+                 -20px -20px 60px #aa1788;
 }
