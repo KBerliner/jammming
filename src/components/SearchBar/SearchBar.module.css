@@ -14,6 +14,11 @@ form {
     -10px -10px 20px #bd1a97;
 }
 
+.neumorphismShadowInset {
+    box-shadow: inset 10px 10px 20px #6e0f57,
+    inset -10px -10px 20px #ba1995;
+}
+
 
 
 .searchIcon {
@@ -28,8 +33,6 @@ form {
     position: absolute;
     cursor: pointer;
     background: #941476;
-    box-shadow: inset 10px 10px 20px #6e0f57,
-                inset -10px -10px 20px #ba1995;
 }
 
 input[type="text"]:focus-visible {
@@ -37,8 +40,6 @@ input[type="text"]:focus-visible {
     border-top-left-radius: 44px;
     border-bottom-left-radius: 44px;
     background: #941476;
-    box-shadow: inset -10px 10px 20px #6e0f57,
-                inset 10px -10px 20px #ba1995;
 }
 
 input[type="text"] {

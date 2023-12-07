@@ -12,8 +12,8 @@ export default function SearchBar() {
     return (
         <div>
             <form>
-                <input className={styles.neumorphismShadow} onChange={handleInput} value={searchQuery} type="text" />
-                <img src={NewSearchIcon} className={`${styles.searchIcon}`} />
+                <input className={styles.neumorphismShadowInset} onChange={handleInput} value={searchQuery} type="text" />
+                <img src={NewSearchIcon} className={`${styles.searchIcon} ${styles.neumorphismShadow}`} />
             </form>
         </div>
     )

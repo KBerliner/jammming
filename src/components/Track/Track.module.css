@@ -1,0 +1,15 @@
+.trackContainer {
+    display: flex;
+    width: 30vw;
+    justify-content: space-around;
+    margin: 2vh 0;
+    box-shadow: inset 10px 10px 20px #6e0f57,
+    inset -10px -10px 20px #ba1995;
+    border-radius: 20px;
+    color: white;
+    /* border: 2px solid red; */
+}
+
+ul {
+    padding: 0;
+}

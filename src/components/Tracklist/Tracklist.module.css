@@ -1,0 +1,17 @@
+.tracklistContainer {
+    width: 35vw;
+    margin-left: 15vw;
+    border-radius: 44px;
+    display: flex;
+    justify-content: center;
+}
+
+.neumorphismShadow {
+    box-shadow:  10px 10px 20px #6b0e55,
+    -10px -10px 20px #bd1a97;
+}
+
+.neumorphismShadowInset {
+    box-shadow: inset 10px 10px 20px #6e0f57,
+    inset -10px -10px 20px #ba1995;
+}
