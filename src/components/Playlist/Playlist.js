@@ -10,9 +10,10 @@ export default function Playlist(props) {
     function handleSubmit() {
         const playlist = {
             name: playlistTitle,
-            tracks: props.tracklist
+            tracks: props.tracklist.map(track => track.uri)
         };
         props.onSubmitPlaylist(playlist);
+        setPlaylistTitle('Your Playlist');
     }
 
     return (
