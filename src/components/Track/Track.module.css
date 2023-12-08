@@ -1,13 +1,23 @@
 .trackContainer {
-    display: flex;
-    width: 30vw;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1vw;
+    place-items: center;
+    width: 28vw;
     margin: 3vh 0;
     background: linear-gradient(145deg, #85126a, #9e157e);
     box-shadow:  20px 20px 60px #7e1164,
                  -20px -20px 60px #aa1788;
     border-radius: 20px;
+    padding: 0 1vw;
+}
+
+h3, h4 {
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
 
 ul {

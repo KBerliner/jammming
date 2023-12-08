@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import SearchBar from './components/SearchBar/SearchBar';
 import Tracklist from './components/Tracklist/Tracklist';
@@ -9,7 +9,7 @@ import Playlist from './components/Playlist/Playlist';
 
 
 function App() {
-  
+  // const [loggedIn, setLoggedIn] = useState(false);
 
   const [searchResultsTracklist, setTracklist] = useState([])
 
@@ -33,9 +33,6 @@ function App() {
   }
 
   async function handleUserLogin(e) {
-    e.preventDefault();
-    console.log(document.getElementById('testinput').value);
-
     const client_id = '055d88f1c2234b3ebc20e65c8cbecf5e';
     const redirect_uri= 'http://localhost:3000'
 
@@ -53,7 +50,7 @@ function App() {
       return alert('You must enter text to search.');
     }
 
-    const token = window.location.hash.substring(1).split('=')[1];
+    const token = localStorage.getItem('authKey');
 
     await fetch(`https://api.spotify.com/v1/search?q=${string}&type=track`, {
       headers: {
@@ -71,18 +68,24 @@ function App() {
           }
         }
       )
-      console.log(tracks);
       setTracklist(tracks);
     })
   }
 
   return (
     <div className="App">
-      <SearchBar onSearch={handleSearch} />
-      <div className="tracksAndPlaylistContainer">
-        <Tracklist handleAddToPlaylist={handleAddToPlaylist} tracklist={searchResultsTracklist} />
-        <Playlist onSubmitPlaylist={handleSubmitPlaylist} handleRemoveFromPlaylist={handleRemoveFromPlaylist} emptyPlaylist={playlistTracklist.length === 0} tracklist={playlistTracklist} />
-      </div>
+      {window.location.hash || localStorage.getItem('authKey') ? 
+        <div>
+        <SearchBar onSearch={handleSearch} />
+        <div className="tracksAndPlaylistContainer">
+          <Tracklist handleAddToPlaylist={handleAddToPlaylist} tracklist={searchResultsTracklist} />
+          <Playlist onSubmitPlaylist={handleSubmitPlaylist} handleRemoveFromPlaylist={handleRemoveFromPlaylist} emptyPlaylist={playlistTracklist.length === 0} tracklist={playlistTracklist} />
+        </div>
+        </div>
+      :
+        <div className="loginContainer"><button onClick={handleUserLogin} className="loginBtn">Login Here!</button></div>
+      }
+
     </div>
   );
 }

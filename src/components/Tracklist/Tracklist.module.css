@@ -1,6 +1,7 @@
 .tracklistContainer {
     width: 35vw;
     margin-left: 12vw;
+    margin-bottom: 4vh;
     border-radius: 44px;
     display: flex;
     flex-direction: column;
