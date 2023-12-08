@@ -16,9 +16,18 @@ export default function SearchBar(props) {
 
     useEffect(() => {
         if (localStorage) {
-            if (!localStorage.getItem('authKey')) {
-                console.log(window.location);
+            if (!localStorage.getItem('authKey') && !localStorage.getItem('uid')) {
                 localStorage.setItem('authKey', window.location.hash.substring(1).split('=')[1]);
+                fetch(`https://api.spotify.com/v1/me`, {
+                    headers: {
+                        "authorization": `Bearer ${localStorage.getItem('authKey')}`
+                    }
+                }).then( async uid => {
+                    const parsedUid = await uid.json();
+                    localStorage.setItem('uid', parsedUid.id);
+                }).catch(error => {
+                    alert('There was an Error retrieving your user ID: ' + error);
+                });
                 window.location = 'http://localhost:3000';
             }
         }
