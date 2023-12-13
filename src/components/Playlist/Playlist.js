@@ -5,8 +5,11 @@ import Track from '../Track/Track';
 export default function Playlist(props) {
     let tracks;
 
-    if (!props.emptyPlaylist && props.tracklist) {
+    if (!props.emptyPlaylist && props.tracklist && props.tracklist.length > 1) {
         tracks = props.tracklist.map(track => <Track handleRemoveFromPlaylist={props.handleRemoveFromPlaylist} uri={track.uri} key={track.uri} name={track.name} artist={track.artist} album={track.album} saved={true} />);
+    } else if (!props.emptyPlaylist && props.tracklist && props.tracklist.length === 1) {
+        let track = props.tracklist[0];
+        tracks = <Track handleRemoveFromPlaylist={props.handleRemoveFromPlaylist} uri={track.uri} key={track.uri} name={track.name} artist={track.artist} album={track.album} saved={true} />;
     }
 
     const [playlistTitle, setPlaylistTitle] = useState('Your Playlist');

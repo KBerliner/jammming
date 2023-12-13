@@ -9,11 +9,16 @@ export default function Tracklist(props) {
     let tracks;
     let areThereTracks;
 
-    if (props.tracklist && props.tracklist.length > 0) {
+    if (props.tracklist && props.tracklist.length && props.playlistTracklist && props.playlistTracklist.length) {
         areThereTracks = true;
-        tracks = props.tracklist.map(track => <Track handleAddToPlaylist={song => props.handleAddToPlaylist(song)} uri={track.uri} key={track.uri} name={track.name} artist={track.artist} album={track.album} saved={false} />);
+        tracks = props.tracklist.filter(track => { return !props.playlistTracklist.some(playlistTrack => track.uri === playlistTrack.uri) });
+        tracks = tracks.map(track => <Track handleAddToPlaylist={song => props.handleAddToPlaylist(song)} uri={track.uri} key={track.uri} name={track.name} artist={track.artist} album={track.album} saved={false} />);
     } else if (props.tracklist && props.tracklist.length == 0) {
         areThereTracks = false;
+    } else {
+        areThereTracks = true;
+        tracks = props.tracklist.map(track => <Track handleAddToPlaylist={song => props.handleAddToPlaylist(song)} uri={track.uri} key={track.uri} name={track.name} artist={track.artist} album={track.album} saved={false} />);
+
     }
 
     return (

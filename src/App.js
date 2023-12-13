@@ -117,7 +117,7 @@ function App() {
         <div data-testid="mainApp">
         <SearchBar onSearch={handleSearch} />
         <div className="tracksAndPlaylistContainer">
-          <Tracklist handleAddToPlaylist={handleAddToPlaylist} tracklist={searchResultsTracklist} />
+          <Tracklist handleAddToPlaylist={handleAddToPlaylist} tracklist={searchResultsTracklist} playlistTracklist={playlistTracklist} />
           <Playlist onSubmitPlaylist={handleSubmitPlaylist} handleRemoveFromPlaylist={handleRemoveFromPlaylist} emptyPlaylist={playlistTracklist.length === 0} tracklist={playlistTracklist} />
         </div>
         </div>
