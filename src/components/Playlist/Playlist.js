@@ -3,7 +3,11 @@ import styles from './Playlist.module.css';
 import Track from '../Track/Track';
 
 export default function Playlist(props) {
-    const tracks = props.tracklist.map(track => <Track handleRemoveFromPlaylist={props.handleRemoveFromPlaylist} uri={track.uri} key={track.uri} name={track.name} artist={track.artist} album={track.album} saved={true} />);
+    let tracks;
+
+    if (!props.emptyPlaylist && props.tracklist) {
+        tracks = props.tracklist.map(track => <Track handleRemoveFromPlaylist={props.handleRemoveFromPlaylist} uri={track.uri} key={track.uri} name={track.name} artist={track.artist} album={track.album} saved={true} />);
+    }
 
     const [playlistTitle, setPlaylistTitle] = useState('Your Playlist');
 
@@ -19,11 +23,11 @@ export default function Playlist(props) {
     return (
         
         <div className={styles.playlistContainer}>
-            <input onChange={({ target }) => setPlaylistTitle(target.value)} className={styles.playlistTitle} value={playlistTitle} />
-            <ul className={styles.playlistTracksContainer}>
+            <input data-testid="playlistTitle" onChange={({ target }) => setPlaylistTitle(target.value)} className={styles.playlistTitle} value={playlistTitle} />
+            <ul data-testid="playlistTracksContainer" className={styles.playlistTracksContainer}>
                 {tracks}
             </ul>
-            {props.emptyPlaylist ? <h4>Start Adding Songs!</h4> : <div onClick={handleSubmit} className={styles.submitToSpotifyBtn}>Submit To Spotify!</div>}
+            {props.emptyPlaylist ? <h4 data-testid="emptyPlaylistText">Start Adding Songs!</h4> : <div data-testid="submitToSpotifyBtn" onClick={handleSubmit} className={styles.submitToSpotifyBtn}>Submit To Spotify!</div>}
         </div>
     )
 }

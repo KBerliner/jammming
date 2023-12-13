@@ -14,17 +14,16 @@ export default function Track(props) {
         if (props.handleAddToPlaylist) {
             props.handleAddToPlaylist(song)
         } else if (props.handleRemoveFromPlaylist) {
-            // console.log(song)
             props.handleRemoveFromPlaylist(song);
         }
     }
 
     return (
-        <div className={styles.trackContainer}>
-            <h3>{props.name}</h3>
-            <h4>{props.artist}</h4>
-            <h4>{props.album}</h4>
-            <img onClick={handleClick} className={styles.addToPlaylistButton} src={props.saved ? removeBtn : addBtn} />
+        <div data-testid={props.saved ? 'playlistTrack' : 'searchResultsTrack'} className={styles.trackContainer}>
+            <h3 data-testid="trackName">{props.name}</h3>
+            <h4 data-testid="trackArtist">{props.artist}</h4>
+            <h4 data-testid="trackAlbum">{props.album}</h4>
+            <img data-testid="trackButton" onClick={handleClick} className={styles.addToPlaylistButton} src={props.saved ? removeBtn : addBtn} />
         </div>
     )
 }

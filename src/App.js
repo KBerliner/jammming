@@ -114,7 +114,7 @@ function App() {
   return (
     <div className="App">
       {window.location.hash || localStorage.getItem('authKey') ? 
-        <div>
+        <div data-testid="mainApp">
         <SearchBar onSearch={handleSearch} />
         <div className="tracksAndPlaylistContainer">
           <Tracklist handleAddToPlaylist={handleAddToPlaylist} tracklist={searchResultsTracklist} />
@@ -122,7 +122,7 @@ function App() {
         </div>
         </div>
       :
-        <div className="loginContainer"><button onClick={handleUserLogin} className="loginBtn">Login Here!</button></div>
+        <div data-testid="loginBtn" className="loginContainer"><button onClick={handleUserLogin} className="loginBtn">Login Here!</button></div>
       }
 
     </div>
